@@ -1,191 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFE OF ADEMAYOWA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.css" integrity="sha512-IISyc/Jrl/fD0vfG2rWRsnaKcBjDrzU6CjH9dtt/IC9KjpC9jvJnGF62W0mMpBOAgwDvIP94SUKIuSimGZ6wrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/6b7201cc64.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/home.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ademayowa — Web Developer</title>
+<meta name="description" content="Adetona Ademayowa — Web developer and science educator based in Lagos, Nigeria.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1 class="logo">
-                    Ade<span>mayowa.</span> 
-                </h1>
 
-                <ul id="sidemenu">
-                    <li><a href="#header"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-graduation-cap"></i> Education</a></li>
-                    <li><a href="#services"><i class="fa fa-globe"></i> Services</a></li>
-                    <li><a href="#portfolio"><i class="fa fa-certificate"></i> Portfolio</a></li>
-                    <li><a href="#contact"><i class="fa fa-address-card"></i> Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-                
-            </nav>
+<div class="noise"></div>
 
-            <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <span>Ademayowa</span><br> Adetona from Lagos, Nigeria</h1>
-            </div>
-        </div>
+<header id="home" class="header">
+  <picture class="header__bg">
+    <source media="(max-width: 700px)" srcset="images/img-3-mobile.jpg">
+    <source media="(max-width: 1300px)" srcset="images/img-3-tablet.jpg">
+    <img src="images/img-3.jpg" alt="" aria-hidden="true">
+  </picture>
+  <div class="header__overlay"></div>
+
+  <nav class="nav container">
+    <a href="#home" class="logo">Ade<span>mayowa</span></a>
+
+    <ul id="nav-menu" class="nav__menu">
+      <li><a href="#home" data-index="home.js">Home</a></li>
+      <li><a href="#about" data-index="about.md">About</a></li>
+      <li><a href="#services" data-index="services.json">Services</a></li>
+      <li><a href="#portfolio" data-index="work/">Work</a></li>
+      <li><a href="#contact" data-index="contact.sh">Contact</a></li>
+      <button class="nav__close" id="nav-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    </ul>
+
+    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div class="hero container">
+    <p class="hero__tag"><span class="dot"></span>available for web development work</p>
+    <h1 class="hero__title">
+      <span class="hero__line" id="type-target">Hi, I&rsquo;m Ademayowa.</span>
+      <span class="hero__line hero__line--muted">I build for the web, and teach in the classroom.</span>
+    </h1>
+    <p class="hero__sub">Web developer based in Lagos, Nigeria — currently building interfaces by day and teaching biology &amp; mathematics on the side.</p>
+    <div class="hero__actions">
+      <a href="#portfolio" class="btn btn--fill">See my work</a>
+      <a href="#contact" class="btn btn--line">Get in touch</a>
     </div>
+  </div>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col1">
-                    <img src="images/user.jpg" alt="">
-                </div>
-                <div class="about-col2">
-                    <h1>About Me</h1>
-                    <p>I am Adetona Ademayowa. A biology and mathematics educator with more than 2 years of experience in creating <br>
-                        positive environments in which learners can learn and grow. A professional web developer who is based in
-                        Lagos, <br> Nigeria. My passion for web development started when I got good PC in my final year in the University,
-                        and I haven't <br> looked back since. Few years later, I'm proud to say that I've successfully worked on some 
-                        landing pages including <br> Brandcord and Regxta. I am also looking forward to work on more projects.
-                    </p>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about section"><span></span></a>
+</header>
 
-                    <div class="tab-titles">
-                        <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-link" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-link" onclick="opentab('education')">Education</p>
-                    </div>
+<main>
 
-                    <div class="tab-content active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Development</span> <br> Web app Development</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="experience">
-                        <ul>
-                            <li><span>2021 - Current</span> <br> Website Development Internship at Royaltech I.T Solutions</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content" id="education">
-                        <ul>
-                            <li><span>2016-2021</span> <br>Biology Education at University of Lagos</li>
-                            
-                            <li><span>2021</span> <br>HTML & CSS Training at CodeWithMosh</li>
-                            
-                            <li><span>2022</span> <br>CSS & JavaScript Training at Clever Programmer</li>
-                        </ul>
-                    </div>
-                </div>
+  <section id="about" class="about section">
+    <div class="container">
+      <p class="eyebrow">about.md</p>
+
+      <div class="about__grid">
+        <div class="about__portrait">
+          <img src="images/user.jpg" alt="Portrait of Adetona Ademayowa">
+          <div class="about__portrait-tag">Lagos, NG</div>
+        </div>
+
+        <div class="about__content">
+          <h2 class="section__title">A developer who spends half his week in a classroom.</h2>
+          <p class="about__text">
+            I'm Adetona Ademayowa — a web developer and secondary-school educator based in Lagos. My interest
+            in building for the web started when I picked up my first PC in my final year at university, and it
+            hasn't let go since. Alongside development, I teach biology and mathematics, which is where I picked up
+            most of my patience for debugging things one step at a time. I've worked on landing pages including
+            Brandcord and Regxta, and I'm always looking for the next thing to build.
+          </p>
+
+          <div class="tabs">
+            <div class="tabs__nav" role="tablist">
+              <button class="tabs__link is-active" role="tab" aria-selected="true" aria-controls="skills" data-tab="skills">Skills</button>
+              <button class="tabs__link" role="tab" aria-selected="false" aria-controls="experience" data-tab="experience">Experience</button>
+              <button class="tabs__link" role="tab" aria-selected="false" aria-controls="education" data-tab="education">Education</button>
             </div>
-        </div>
-    </div>
 
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div class="web">
-                    <i class="fa fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>I build and construct websites that is user friendly, 
-                        that will meet user expectations by ensuring they look good, 
-                        run smoothly and offer easy access points with no loading issues
-                         between pages or error messages.
-                    </p>
-                     <a href="#">Learn more <i class="fa fa-arrow-right"></i></a>    
-                </div>
-                <div class="web">
-                    <i class="fa fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>I build and construct websites that is user friendly, 
-                        that will meet user expectations by ensuring they look good,
-                        run smoothly and offer easy access points with no loading issues
-                         between pages or error messages.
-                    </p>
-                     <a href="#">Learn more <i class="fa fa-arrow-right"></i></a>    
-                </div>
-                <div class="web">
-                    <i class="fa fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>I build and construct websites that is user friendly, 
-                        that will meet user expectations by ensuring they look good,
-                        run smoothly and offer easy access points with no loading issues
-                         between pages or error messages.
-                    </p>
-                     <a href="#">Learn more <i class="fa fa-arrow-right"></i></a>    
-                </div>
-
+            <div class="tabs__panel is-active" id="skills" role="tabpanel">
+              <ul class="tab-list">
+                <li><span>Frontend</span>HTML, CSS &amp; JavaScript — building responsive, framework-assisted interfaces</li>
+                <li><span>Tooling</span>Version control, browser dev tools, basic build workflows</li>
+                <li><span>Everyday</span>Microsoft Excel, active listening, clear written communication</li>
+              </ul>
             </div>
-        </div>
-    </div>
 
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="/images/img-home.jpg" alt="a picture of me">
-                    <div class="layer">
-                        <h3>Blog Website</h3>
-                        <p>Get the latest news and trends about music, fashion and movies both
-                             locally and internationally.</p>
-                        <a href="#"><i class="fa fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="/images/img-2.jpg" alt="">
-                    <div class="layer">
-                        <h3>Shopping Website</h3>
-                        <p>Buy your budget friendly products and services including clothings, groceries, electronics to furnitures.</p>
-                        <a href="#"><i class="fa fa-external-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="/images/img-8.jpg" alt="">
-                    <div class="layer">
-                        <h3>Social Media</h3>
-                        <p>Reach out to friends, family and also connect with new people all over the world.</p>
-                        <a href="#"><i class="fa fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+            <div class="tabs__panel" id="experience" role="tabpanel">
+              <ul class="tab-list">
+                <li><span>2022 — Present</span>Mathematics, Biology &amp; Basic Technology Teacher, Royal Comprehensive College, Ipaja</li>
+                <li><span>2021 — Present</span>Web Developer Intern, Royaltech I.T Solutions, Lagos</li>
+                <li><span>2019 — 2020</span>Student Teacher (Biology), Mende Senior High School, Lagos</li>
+              </ul>
             </div>
-            <a href="#" class="btn">See More</a>
-
-        </div>
-    </div>
-
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><a href="mayokay31@gmail.com"><i class="fa fa-paper-plane"></i> mayokay31@gmailcom</a></p>
-                    <p><a href="tel:2347066763678"><i class="fa fa-phone"></i> +2347066763678</a></p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/mayowaezekiel.adetona"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://twitter.com/Ademayowa123"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.linkedin.com/in/adetona-ademayowa"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://instagram.com/a.d.e.m.a.y.o.w.a_"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <a href="/images/Adetona Ademayowa resume.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form action="">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                </div>
+            <div class="tabs__panel" id="education" role="tabpanel">
+              <ul class="tab-list">
+                <li><span>2016 — 2021</span>B.Ed in Biology Education, University of Lagos</li>
+                <li><span>2022</span>CSS &amp; JavaScript Training, Clever Programmer</li>
+                <li><span>2021</span>HTML &amp; CSS Training, CodeWithMosh</li>
+                <li><span>2010 — 2016</span>WASSCE, Dynamic Landmark College, Ogun</li>
+              </ul>
             </div>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Copyrights &copy; Adetona Ademayowa Ezekiel</p>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <script src="/js/home.js"></script>
+  <section id="services" class="services section">
+    <div class="container">
+      <p class="eyebrow">services.json</p>
+      <h2 class="section__title">What I can help you build.</h2>
+
+      <div class="services__grid">
+        <article class="service-card">
+          <i class="fa-solid fa-code service-card__icon"></i>
+          <h3>Frontend Development</h3>
+          <p>Clean, semantic HTML, CSS and JavaScript — built to load fast and hold up across devices, without unnecessary dependencies.</p>
+          <a href="#contact">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-mobile-screen-button service-card__icon"></i>
+          <h3>Responsive Websites</h3>
+          <p>Layouts that are designed mobile-first and tested on phone, tablet and desktop, so your site works wherever people find it.</p>
+          <a href="#contact">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card">
+          <i class="fa-solid fa-flask service-card__icon"></i>
+          <h3>Science &amp; Math Tutoring</h3>
+          <p>One-on-one or small-group support in biology and mathematics, drawing on classroom experience with WAEC preparation.</p>
+          <a href="#contact">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <p class="eyebrow">work/</p>
+      <h2 class="section__title">A few things I've built.</h2>
+
+      <div class="work__grid">
+        <article class="work-card">
+          <img src="images/img-8.jpg" alt="Brandcord blog interface preview">
+          <div class="work-card__layer">
+            <h3>Brandcord</h3>
+            <p>A blog landing page covering music, fashion and film — built for fast reading on any screen.</p>
+            <a href="#" aria-label="View Brandcord project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img src="images/img-2.jpg" alt="Regxta shopping interface preview">
+          <div class="work-card__layer">
+            <h3>Regxta</h3>
+            <p>A shopping landing page for everyday products, from clothing and groceries to electronics.</p>
+            <a href="#" aria-label="View Regxta project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img src="images/img-9.jpg" alt="Social platform interface preview">
+          <div class="work-card__layer">
+            <h3>Connect</h3>
+            <p>A social concept for staying in touch with friends, family and new people worldwide.</p>
+            <a href="#" aria-label="View Connect project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <a href="#contact" class="btn btn--line btn--center">Let's build something</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <p class="eyebrow">contact.sh</p>
+
+      <div class="contact__grid">
+        <div class="contact__info">
+          <h2 class="section__title">Let's talk about your project.</h2>
+          <p class="contact__lead">Have a website in mind, or need a hand with biology or math? Send a message — I read every one.</p>
+
+          <ul class="contact__list">
+            <li>
+              <a href="mailto:mayokay31@gmail.com"><i class="fa-solid fa-paper-plane"></i> mayokay31@gmail.com</a>
+            </li>
+            <li>
+              <a href="tel:+2347066763678"><i class="fa-solid fa-phone"></i> +234 706 676 3678</a>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</span>
+            </li>
+          </ul>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com/mayowaezekiel.adetona" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/Ademayowa123" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/adetona-ademayowa" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/a.d.e.m.a.y.o.w.a_" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <a href="Adetona Ademayowa resume.pdf" download class="btn btn--fill btn--resume">Download CV <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+
+        <form class="contact__form" id="contact-form">
+          <label for="name" class="sr-only">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email" class="sr-only">Your email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+
+          <label for="message" class="sr-only">Your message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+
+          <button type="submit" class="btn btn--fill">Send message</button>
+          <p class="contact__form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Adetona Ademayowa Ezekiel</p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
